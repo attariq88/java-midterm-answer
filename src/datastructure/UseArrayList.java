@@ -50,14 +50,14 @@ public class UseArrayList {
         // while loop with iterator
         System.out.println("*************");
         Iterator iterator = names.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
 
         //store sorted data
         System.out.println("*************");
         Collections.sort(names);
-        System.out.println("After sorting: "+names);
+        System.out.println("After sorting: " + names);
 
     }
 
