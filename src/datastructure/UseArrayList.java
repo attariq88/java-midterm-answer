@@ -54,7 +54,7 @@ public class UseArrayList {
             System.out.println(iterator.next());
         }
 
-        //store sorted data
+        //sorted data
         System.out.println("*************");
         Collections.sort(names);
         System.out.println("After sorting: " + names);
