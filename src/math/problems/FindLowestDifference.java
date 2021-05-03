@@ -16,7 +16,7 @@ public class FindLowestDifference {
         Arrays.sort(array1);
         Arrays.sort(array2);
 
-        int difference = Integer.MAX_VALUE;
+        int difference = Integer.MAX_VALUE;     //Integer.Max_Value = 2147483647
 
         for (int i = 0; i < array1.length-1; i++) {
             if (array1[i+1] - array1[i] < difference){
