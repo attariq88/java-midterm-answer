@@ -43,8 +43,8 @@ public class UseArrayList {
 
         //for each loop
         System.out.println("*************");
-        for (int i = 0; i < names.size(); i++) {
-            System.out.println(names.get(i));
+        for (String nameList : names) {
+            System.out.println(nameList);
         }
 
         // while loop with iterator
