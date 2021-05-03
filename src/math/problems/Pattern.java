@@ -8,6 +8,23 @@ public class Pattern {
          *
          *
          */
+        int number = 100;
 
+        for (int i = number; i > 90; i--) {
+            System.out.print(i + ",");
+        }
+        for (int i = number - 10; i > 70; i = i - 2) {
+            System.out.print(i + ",");
+        }
+        for (int i = number - 30; i > 40; i = i - 3) {
+            System.out.print(i + ",");
+        }
+        for (int i = number - 60; i >= 0; i = i - 4) {
+            if (i == 0) {
+                System.out.println(i + "");
+            } else {
+                System.out.print(i + ",");
+            }
+        }
     }
 }
