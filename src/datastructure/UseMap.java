@@ -51,8 +51,8 @@ public class UseMap {
         System.out.println("**************");
         Iterator<Map.Entry<String,List<String>>> iterator = listOfCities.entrySet().iterator();
         while (iterator.hasNext()){
-            Map.Entry<String,List<String>> set = iterator.next();
-            System.out.println(set.getKey()+"- "+set.getValue());
+            Map.Entry<String,List<String>> setOfList = iterator.next();
+            System.out.println(setOfList.getKey()+"- "+setOfList.getValue());
         }
 
     }
