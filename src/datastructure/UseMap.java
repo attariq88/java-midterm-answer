@@ -49,10 +49,10 @@ public class UseMap {
 
         //while loop
         System.out.println("**************");
-        Iterator<Map.Entry<String,List<String>>> iterator = listOfCities.entrySet().iterator();
-        while (iterator.hasNext()){
-            Map.Entry<String,List<String>> setOfList = iterator.next();
-            System.out.println(setOfList.getKey()+"- "+setOfList.getValue());
+        Iterator<Map.Entry<String, List<String>>> iterator = listOfCities.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, List<String>> setOfList = iterator.next();
+            System.out.println(setOfList.getKey() + "- " + setOfList.getValue());
         }
 
     }
