@@ -38,7 +38,7 @@ public class UseQueue {
         System.out.println(patientLine.poll());
         System.out.println("After polling - "+patientLine);
 
-        //for loop
+        //for each loop
         System.out.println("**********");
         for (String nameList : patientLine) {
             System.out.println(nameList);
