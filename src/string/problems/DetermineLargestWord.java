@@ -15,13 +15,26 @@ public class DetermineLargestWord {
         //implement
 
         System.out.println(s);
+        System.out.println(wordNLength);
 
     }
 
-    public static Map<Integer, String> findTheLargestWord(String wordGiven) {
+    public static Map<Integer, String> findTheLargestWord(String sentenceGiven) {
         Map<Integer, String> map = new HashMap<Integer, String>();
         String st = "";
         //implement
+        String words[] = sentenceGiven.split(" ");
+        int largestWordLen = 0;
+        String largestWord = "";
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            int wordLength = word.length();
+            if (wordLength > largestWordLen) {
+                largestWordLen = wordLength;
+                largestWord = word;
+            }
+        }
+        map.put(largestWordLen, largestWord);
 
         return map;
     }
