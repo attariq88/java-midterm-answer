@@ -2,49 +2,14 @@ package design;
 
 import java.util.Date;
 
-public abstract class EmployeeAbstract implements Employee {
-    @Override
-    public int employeeId() {
-        return 0;
-    }
+public abstract class EmployeeAbstract {
 
-    @Override
-    public String employeeName() {
-        return null;
-    }
+    //phoneNumber() return employee's phone number
+    public abstract String phoneNumber();
 
-    @Override
-    public String address() {
-        return null;
-    }
+    //email() will return employee's email
+    public abstract String email();
 
-    @Override
-    public String email() {
-        return null;
-    }
-
-    @Override
-    public Date dateOfBirth() {
-        return null;
-    }
-
-    @Override
-    public void assignDepartment() {
-
-    }
-
-    @Override
-    public String employeePosition() {
-        return null;
-    }
-
-    @Override
-    public int calculateSalary() {
-        return 0;
-    }
-
-    @Override
-    public void benefitLayout() {
-
-    }
+    //address() will return employee's address
+    public abstract String address();
 }
