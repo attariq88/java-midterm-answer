@@ -16,12 +16,6 @@ public interface Employee {
     //employeeName() will return employee name
     String employeeName();
 
-    //address() will return employee's address
-    String address();
-
-    //email() will return employee's email
-    String email();
-
     //dateOfBirth() will return employee's date of birth
     Date dateOfBirth();
 
