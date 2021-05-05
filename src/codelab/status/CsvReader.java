@@ -64,6 +64,22 @@ public class CsvReader {
 
         // implement the average score of the class here
 
+        ArrayList<Integer> number = new ArrayList<>();
+        for (Trainee trainee: roster) {
+            number.add(trainee.getNumberOfExercisesSolved());
+        }
+
+        double sum = 0;
+        for(int num : number){
+            sum += num;
+        }
+
+        double average = sum/roster.size();
+        System.out.println(sum);
+        System.out.println(roster.size());
+        System.out.println("Average score of the class is "+average);
+
+
     }
 
 }
