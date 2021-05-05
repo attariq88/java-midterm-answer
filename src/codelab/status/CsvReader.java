@@ -75,8 +75,6 @@ public class CsvReader {
         }
 
         double average = sum/roster.size();
-        System.out.println(sum);
-        System.out.println(roster.size());
         System.out.println("Average score of the class is "+average);
 
 
