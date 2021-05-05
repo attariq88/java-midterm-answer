@@ -53,8 +53,8 @@ public class DataReader {
         //Store each words into LinkedList
         System.out.println("-------------");
         LinkedList<String> wordList = new LinkedList<>();
-        String[] arrayOfIndividualWords = finalContainer.replace(".","").replace(",","").split(" ");
-        for(String individulaWords : arrayOfIndividualWords){
+        String[] arrayOfIndividualWords = finalContainer.replace(".", "").replace(",", "").split(" ");
+        for (String individulaWords : arrayOfIndividualWords) {
             wordList.add(individulaWords);
         }
         System.out.println(wordList);
@@ -81,14 +81,14 @@ public class DataReader {
 
         //for each loop
         System.out.println("-----------");
-        for(int i = 0; i < items.size(); i++){
+        for (int i = 0; i < items.size(); i++) {
             System.out.println(items.get(i));
         }
 
         //while loop
         System.out.println("-------------");
         Iterator iterator = items.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
 

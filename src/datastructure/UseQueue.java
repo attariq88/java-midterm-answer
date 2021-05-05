@@ -33,10 +33,10 @@ public class UseQueue {
 
         //poll
         System.out.println("**********");
-        System.out.println("Before polling - "+patientLine);
+        System.out.println("Before polling - " + patientLine);
         System.out.println(patientLine.poll());
         System.out.println(patientLine.poll());
-        System.out.println("After polling - "+patientLine);
+        System.out.println("After polling - " + patientLine);
 
         //for each loop
         System.out.println("**********");

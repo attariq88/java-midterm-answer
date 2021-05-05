@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class UseArrayList {
 
     static ArrayList<String> names = new ArrayList<>();
+
     public static void main(String[] args) {
         /*
          * Demonstrate how to use ArrayList that includes add,peek,remove,retrieve elements.
@@ -31,7 +32,6 @@ public class UseArrayList {
         names.add("Kasef");
         names.add("Sadi");
         names.add("Tunan");
-
 
         //peek
         List startWithM = names.stream().filter(obj -> obj.startsWith("M")).peek(System.out::println).collect(Collectors.toList());
@@ -62,24 +62,9 @@ public class UseArrayList {
         ArrayList<String> sortedData = sortedNames();
         System.out.println("After sorting: " + sortedData);
 
-        //store sorted data in to database
-        ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        List<String> lowestValue = new ArrayList<String>();
-
-        try {
-            connectToSqlDB.insertDataFromArrayListToSqlTable(names, "tbl_lowestNumber", "column_lowestNumber");
-            lowestValue = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println("Data is reading from the Table (tbl_lowestNumber) and displaying to the console");
-        for (String st : lowestValue) {
-            System.out.println(st);
-        }
-
     }
-    public static ArrayList<String> sortedNames(){
+
+    public static ArrayList<String> sortedNames() {
         Collections.sort(names);
         return names;
     }
