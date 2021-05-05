@@ -1,5 +1,7 @@
 package design;
 
+import java.util.Date;
+
 public interface Employee {
 	
 	/*Employee is an Interface which contains multiple unimplemented methods.Again few methods
@@ -14,8 +16,20 @@ public interface Employee {
     //employeeName() will return employee name
     String employeeName();
 
+    //address() will return employee's address
+    String address();
+
+    //email() will return employee's email
+    String email();
+
+    //dateOfBirth() will return employee's date of birth
+    Date dateOfBirth();
+
     //assignDepartment() will assign employee to departments
     void assignDepartment();
+
+    //position() will return employee position
+    String employeePosition();
 
     //calculate employee salary
     int calculateSalary();
