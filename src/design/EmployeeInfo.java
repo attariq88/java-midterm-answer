@@ -1,8 +1,10 @@
 package design;
 
+import java.time.Period;
+import java.util.Date;
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends EmployeeAbstract implements Employee {
 
     /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
      * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,7 +22,28 @@ public class EmployeeInfo {
     /*
      * declare few static and final fields and some non-static fields
      */
+    private int employeeId;
+    private String employeeName;
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
     static String companyName;
+    final String typeOfCompany = "Web Development Company";
+
 
     /*
      * You must implement the logic for below 2 methods and
@@ -32,13 +55,21 @@ public class EmployeeInfo {
      * you must have multiple constructor.
      * Must implement below constructor.
      */
+    public EmployeeInfo() {
+
+    }
     public EmployeeInfo(int employeeId) {
+        this.employeeId = employeeId;
 
     }
 
     public EmployeeInfo(String name, int employeeId) {
+        this.employeeName = name;
+        this.employeeId = employeeId;
 
     }
+
+
 
     /*
      * This methods should calculate Employee bonus based on salary and performance.
@@ -49,8 +80,10 @@ public class EmployeeInfo {
      *
      */
     public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
+
         int total = 0;
         return total;
+
     }
 
     /*
@@ -72,8 +105,61 @@ public class EmployeeInfo {
         //implement numbers of year from above two dates
         //Calculate pension
 
+
+
         return total;
     }
+
+    @Override
+    public int employeeId() {
+        return 0;
+    }
+
+    @Override
+    public String employeeName() {
+        return null;
+    }
+
+    @Override
+    public Date dateOfBirth() {
+        return null;
+    }
+
+    @Override
+    public void assignDepartment() {
+
+    }
+
+    @Override
+    public String employeePosition() {
+        return null;
+    }
+
+    @Override
+    public int calculateSalary() {
+        return 0;
+    }
+
+    @Override
+    public void benefitLayout() {
+
+    }
+
+    @Override
+    public String phoneNumber() {
+        return null;
+    }
+
+    @Override
+    public String email() {
+        return null;
+    }
+
+    @Override
+    public String address() {
+        return null;
+    }
+
 
     private static class DateConversion {
 
@@ -111,22 +197,22 @@ public class EmployeeInfo {
                     date = 6;
                     break;
                 case July:
-                    date = 1;
+                    date = 7;
                     break;
                 case August:
-                    date = 1;
+                    date = 8;
                     break;
                 case September:
-                    date = 1;
+                    date = 9;
                     break;
                 case October:
-                    date = 1;
+                    date = 10;
                     break;
                 case November:
-                    date = 1;
+                    date = 11;
                     break;
                 case December:
-                    date = 1;
+                    date = 12;
                     break;
                 default:
                     date = 0;
