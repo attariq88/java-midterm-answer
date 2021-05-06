@@ -36,8 +36,8 @@ public class ProcessStudentInfo {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         //Path of XML data to be read.
-        String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
-        String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+        String pathSelenium = System.getProperty("user.dir") + "/src/parser/xml/selenium.xml";
+        String pathQtp = System.getProperty("user.dir") + "/src/parser/xml/qtp.xml";
         String tag = "id";
         //Create ConnectToSqlDB Object
 
@@ -57,18 +57,22 @@ public class ProcessStudentInfo {
         seleniumStudents = xmlReader.parseData(tag, pathSelenium);
 
         //Parse Data using parseData method and then store data into Qtp ArrayList.
+        qtpStudents = xmlReader.parseData(tag, pathQtp);
 
         //add Selenium ArrayList data into map.
-
+        list.put("Salenium students",seleniumStudents);
         //add Qtp ArrayList data into map.
+        list.put("QTP students",qtpStudents);
 
         //Retrieve map data and display output.
+        System.out.println(list);
 
         //Store Qtp data into Qtp table in Database
         //connectToSqlDB.insertDataFromArrayListToMySql(seleniumStudents, "qtp","studentList");
 
         //Store Selenium data into Selenium table in Database
         List<Student> stList = new ArrayList<>();
+
         //Retrieve Qtp students from Database
 
         for (Student st : stList) {
