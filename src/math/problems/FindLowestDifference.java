@@ -18,15 +18,15 @@ public class FindLowestDifference {
 
         int difference = Integer.MAX_VALUE;     //Integer.Max_Value = 2147483647
 
-        for (int i = 0; i < array1.length-1; i++) {
-            if (array1[i+1] - array1[i] < difference){
-                difference = array1[i+1] - array1[i];
+        for (int i = 0; i < array1.length - 1; i++) {
+            if (array1[i + 1] - array1[i] < difference) {
+                difference = array1[i + 1] - array1[i];
             }
 
         }
-        for (int i = 0; i < array2.length-1; i++) {
-            if (array2[i+1] - array2[i] < difference){
-                difference = array2[i+1] - array2[i];
+        for (int i = 0; i < array2.length - 1; i++) {
+            if (array2[i + 1] - array2[i] < difference) {
+                difference = array2[i + 1] - array2[i];
             }
         }
         System.out.println(difference);
