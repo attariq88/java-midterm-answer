@@ -13,7 +13,7 @@ public class Factorial {
 
         //Factorial using Iteration
         int number = 5;
-        int fact=1;
+        int fact = 1;
         for (int i = 1; i <= number; i++) {
             fact *= i;
             System.out.println(fact);
@@ -25,11 +25,11 @@ public class Factorial {
     }
 
     //Factorial using Recursion
-    public static int factorial(int number){
-        if (number == 1){
+    public static int factorial(int number) {
+        if (number == 1) {
             return 1;
-        }else {
-            return number* factorial(number - 1);
+        } else {
+            return number * factorial(number - 1);
         }
     }
 }
