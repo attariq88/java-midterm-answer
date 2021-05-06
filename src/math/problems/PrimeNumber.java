@@ -25,7 +25,7 @@ public class PrimeNumber {
         for (int number = start; number <= end; number++) {
             boolean isPrime = true;
 
-            for (int factor = 2; factor <= number/2; factor++) {
+            for (int factor = 2; factor <= number / 2; factor++) {
                 if (number % factor == 0) {
                     isPrime = false;
                     break;
