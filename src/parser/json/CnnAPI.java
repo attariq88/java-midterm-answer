@@ -37,7 +37,7 @@ public class CnnAPI {
      */
 
     public static void main(String[] args) throws IOException, JSONException {
-        JSONObject rootObject = new JSONObject(new String(Files.readAllBytes(new File("src/json/parser/data.json").toPath())));
+        JSONObject rootObject = new JSONObject(new String(Files.readAllBytes(new File("src/parser/json/data.json").toPath())));
         JSONArray array = rootObject.getJSONArray("articles");
         List<Articles> list = new ArrayList<>();
         for (int i = 0; i < array.length(); i++) {
@@ -51,6 +51,7 @@ public class CnnAPI {
             }
             list.add(data);
         }
+        System.out.println(list);
 
         //continue
 
